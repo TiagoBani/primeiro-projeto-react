@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-export default class index extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
-}
+// import { Container } from './styles';
+import Dashboard from '../pages/Dashboard';
+import Repository from '../pages/Repository';
+
+const Routes: React.FC = () => {
+  return (
+    <Switch>
+      <Route path="/" exact component={Dashboard} />
+      <Route path="/repository" component={Repository} />
+    </Switch>
+  );
+};
+
+export default Routes;
